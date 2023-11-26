@@ -1,0 +1,88 @@
+<%- include('head') %>
+<link rel="stylesheet" href="/stylesheets/registerRestaurant.css">
+<title>Obras</title>
+<%- include('navbar') %>
+
+<main class="container-xxl s1-padding-y">
+  <section class="row section1 align-items-center text-center padding-y">
+    <div class="col-12 col-xl-6 p-0">
+      
+      <img src="/images/restaurant/<%= result[0].rest_img  %>" alt="imagen del restaurante">
+      
+    </div>
+    <div class="col-12 col-xl-6 p-0">
+      <form 
+          action="/restaurants/editRestaurant/<%= result[0].restaurant_id %>" 
+          method="post"
+          enctype="multipart/form-data">
+
+        <label for="name"><p>Nombre</p></label>
+        <input 
+        class="form-control"
+        type="text"
+        name="rest_name"
+        placeholder="Nombre"
+        value="<%= result[0].rest_name %>"
+        >
+        
+        <label for="name"><p>Tipo de cocina</p></label>
+        <input 
+        class="form-control"
+        type="text"
+        name="style"
+        placeholder="Tipo de cocina"
+        value="<%= result[0].style %>"
+        >
+        
+        <label for="name"><p>Teléfono</p></label>
+        <input 
+        class="form-control"
+        type="text"
+        name="phone"
+        placeholder="Teléfono"
+        value="<%= result[0].phone %>"
+        >
+        
+        <label  for="name"><p>Descripción</p></label>
+        <input 
+        class="form-control"
+        type="text"
+        name="rest_description"
+        placeholder="Descripción"
+        value="<%= result[0].rest_description %>"
+        >
+        
+        <label class="btn btn-dark pt-1" for="file">SUBE UNA IMAGEN</label>
+          <input
+            class="form-control"
+            id="file"
+            type="file"
+            name="img"
+            style="display: none;">
+            
+        <h3 style="color:red"><%= typeof message != 'undefined' ? message : null %></h3>
+        <div>
+        <button class="btn btn-dark">ACEPTAR</button>
+        <a href="/restaurants/oneRestaurant/<%= result[0].restaurant_id %>"><button class="btn btn-dark" type="button">CANCELAR</button></a>
+        <button class="btn btn-dark" type="reset">RESET</button>
+      </form>
+    </div>
+  </div>
+
+    <div class="botones col-12 p-0">
+        
+        <a href="/restaurants/deleteRestaurantLogic/<%= result[0].restaurant_id %>"><button class="btn btn-dark">ELIMINAR LÓGICA</button></a>
+        <a href="/restaurants/deleteRestaurant/<%= result[0].restaurant_id %>"><button class="btn btn-dark">ELIMINAR TOTAL</button></a>
+        <a href="/dishes/createDishes/<%= result[0].restaurant_id %>"><button class="btn btn-dark">AÑADIR UN PLATO</button></a>
+      
+    </div>
+      
+    
+      
+  </section>
+ 
+      
+
+</main>
+
+<%- include('footer') %>

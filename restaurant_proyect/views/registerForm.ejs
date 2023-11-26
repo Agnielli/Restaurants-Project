@@ -1,0 +1,92 @@
+<%- include('head') %>
+<link rel="stylesheet" href="/stylesheets/registerRestaurant.css">
+<title>Registro</title>
+<%- include('navbar') %>
+
+<main class="container-xxl s1-padding-y">
+  <section class="row section1 align-items-center text-center">
+    <div class="col-12 col-xl-6 p-0">
+      
+      <img src="/images/restaurant/user.png" alt="imagen del restaurante">
+      
+    </div>
+    <div class="col-12 col-xl-6 p-0">
+      <form 
+      class="m-0"
+      action="/restaurants/register" 
+      method="post"
+      enctype="multipart/form-data">
+        <label for="name"><p>Nombre</p></label>
+        <input 
+        class="form-control"
+        type="text"
+        name="rest_name"
+        placeholder="Nombre" 
+        >
+        
+        <label for="name"><p>Tipo de cocina</p></label>
+        <input 
+        class="form-control"
+        type="text"
+        name="style"
+        placeholder="Tipo de cocina"
+        >
+        
+        <label for="name"><p>Teléfono</p></label>
+        <input 
+        class="form-control"
+        type="text"
+        name="phone"
+        placeholder="Teléfono"
+        >
+        
+        <label  for="name"><p>Descripción</p></label>
+        <input 
+        class="form-control"
+        type="text"
+        name="rest_description"
+        placeholder="Descripción"
+        >
+
+        <label for="email"><p>Email</p></label>
+        <input 
+        class="form-control"
+        type="email"
+        name="email"
+        placeholder="Email"
+        >
+        <label for="password"><p>Password</p></label>
+        <input 
+        class="form-control"
+        type="password"
+        name="password"
+        placeholder="Contraseña"
+        >
+        <label for="password"><p>Repite Password</p></label>
+        <input 
+        class="form-control"
+        type="password"
+        name="password2"
+        placeholder="Contraseña"
+        >
+        
+          <label class="btn btn-dark pt-1" for="file">SUBE UNA IMAGEN</label>
+          <input
+            class="form-control"
+            id="file"
+            type="file"
+            name="img"
+            style="display: none;">
+        
+        <h3 style="color:red"><%= typeof message != 'undefined' ? message : null %></h3>
+        <div>
+        <button class="btn btn-dark">ACEPTAR</button>
+        <a href="/>"><button class="btn btn-dark" type="button">CANCELAR</button></a>
+        <button class="btn btn-dark" type="reset">LIMPIAR</button>
+      </form>
+    </div>
+  </div>
+
+</main>
+
+<%- include('footer') %>

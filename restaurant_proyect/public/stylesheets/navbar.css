@@ -1,0 +1,12 @@
+.navbar{
+  background: linear-gradient(to right, #D6D46D, #9A4444);
+}
+
+a {
+  text-decoration: none;
+}
+.menu{
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.25rem;
+}

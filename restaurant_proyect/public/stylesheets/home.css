@@ -1,0 +1,58 @@
+:root {
+  --verdoso: #D6D46D;
+  --pastel: #F4DFB6;
+  --naranjita: #DE8F5F;
+  --rojizo: #9A4444;
+
+}
+
+*{
+  font-family: 'Josefin Slab', serif;
+  font-family: 'Roboto', sans-serif;
+  
+}
+
+.tam{
+  width: 200px;
+}
+
+a{
+  font-family: 'Josefin Slab', serif;
+  font-weight: bold;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+hr {
+  opacity: 1;
+  width: 6rem;
+  border-top: 3px solid #9A4444;
+}
+
+
+
+.padding-y-sec {
+  padding: 4rem 0;
+  
+}
+
+.fondo{
+  background-color: white;
+}
+
+body{
+  background: linear-gradient(to right, #D6D46D, #9A4444);
+  
+}
+
+
+
+.carousel-item img {
+  height: 50vh;
+  width: 100vw;
+  padding: 0;
+  object-fit: cover;
+}
+

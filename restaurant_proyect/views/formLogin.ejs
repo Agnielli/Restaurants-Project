@@ -1,0 +1,45 @@
+<%- include('head') %>
+<link rel="stylesheet" href="/stylesheets/registerRestaurant.css">
+<title>Login</title>
+<%- include('navbar') %>
+
+<main class="container-xxl s1-padding-y d-flex align-items-center justify-content-center">
+  <section class="row section1 align-items-center text-center ">
+    <div class="col-12 col-xl-6 p-0">
+      
+      <img src="/images/restaurant/user.png" alt="imagen del restaurante">
+      
+    </div>
+    <div class="col-12 col-xl-6 p-0">
+      <form 
+        class="m-0"
+        action="/restaurants/login" 
+        method="post">
+  
+          <label for="email"><p>Email</p></label>
+          <input 
+          class="form-control"
+          type="text"
+          name="email"
+          placeholder="Email"
+          >
+          
+          <label for="password"><p>Password</p></label>
+          <input 
+          class="form-control"
+          type="text"
+          name="password"
+          placeholder="Password"
+          >
+          <h3 style="color:red"><%= typeof message != 'undefined' ? message : null %></h3>
+          <div>
+          <button class="btn btn-dark">Aceptar</button>
+          <a href="/"><button class="btn btn-dark" type="button">Cancelar</button></a>
+          <button class="btn btn-dark" type="reset">Reset</button>
+        </form>
+      </div>
+  </div>
+
+</main>
+
+<%- include('footer') %>

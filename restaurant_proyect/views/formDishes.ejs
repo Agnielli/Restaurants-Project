@@ -1,0 +1,53 @@
+<%- include('head') %>
+<link rel="stylesheet" href="/stylesheets/registerRestaurant.css">
+<title>Formulario crear platos</title>
+<%- include('navbar') %>
+
+<main class="container-xxl s1-padding-y d-flex align-items-center justify-content-center">
+  <section class="row section1 align-items-center text-center">
+    <div class="col-12 col-xl-6 p-0">
+      
+      <img src="/images/dishes/nopic.png" alt="imagen del restaurante">
+      
+    </div>
+    <div class="col-12 col-xl-6 p-0">
+      <form 
+        class="m-0"
+        action="/dishes/createDishes/<%= restaurant_id %>" 
+        method="post"
+        enctype="multipart/form-data">
+
+        <label for="dishes_name">Titulo del plato</label>
+        <input 
+        class="form-control"
+        type="text"
+        name="dishes_name"
+        placeholder="Titulo del plato"
+        >
+        
+        <label for="name">Descripción del plato</label>
+        <input 
+        class="form-control"
+        type="text"
+        name="dishes_description"
+        placeholder="Descripción del plato"
+        >
+        
+        <label class="btn btn-dark pt-1" for="file">SUBE UNA IMAGEN</label>
+          <input
+            class="form-control"
+            id="file"
+            type="file"
+            name="img"
+            style="display: none;">
+
+        <h3><%= typeof message != 'undefined' ? message : null %></h3>
+        <div>
+        <button class="btn btn-dark">Aceptar</button>
+        <a href="/"><button class="btn btn-dark" type="button">Cancelar</button></a>
+        <button class="btn btn-dark" type="reset">Reset</button>
+      </div>
+      
+</main>
+
+<%- include('footer') %>

@@ -1,0 +1,32 @@
+<%- include('head') %>
+<link rel="stylesheet" href="/stylesheets/allRestaurants.css">
+<title>Platos</title>
+<%- include('navbar') %>
+
+<main class="container-xxl">
+  <section class="row section1">
+    <div class="col-12 text-center">
+      <h1>TODOS LOS PLATOS</h1>
+      
+          <div class="d-flex flexwrap gap-4 m-3 row justify-content-center">
+            <% result.forEach( elem =>{ %>
+        
+                <div class="card col-3 p-0" style="width: 18rem;">
+                  <img src="/images/dishes/<%= elem.dishes_img %>" class="card-img-top" alt="platos">
+                  <div class="card-body d-flex flex-column justify-content-between">
+                    <h4 class="card-title"><%= elem.dishes_name %></h4>
+                    <p class="card-text"><%= elem.dishes_description %></p>
+                    <a href="/restaurants/oneRestaurant/<%= elem.restaurant_id %>" class="btn btn-dark">CONOCER EL RESTAURANTE</a>
+                  </div>
+                </div>
+                <% }) %>
+              </div>
+      
+    </div>
+  </section>
+
+  
+
+</main>
+
+<%- include('footer') %>
