@@ -19,7 +19,7 @@ router.post('/register', uploadImage("restaurant"), restaurantsControllers.creat
 // localhost:3000/restaurants/oneRestaurant/1
 router.get("/oneRestaurant/:id", restaurantsControllers.viewOneRestaurant)
 
-// abre el formulario de edición del artista
+// abre el formulario de edición del restaurante
 // localhost:3000/restaurants/editRestaurant/1
 router.get('/editRestaurant/:id', restaurantsControllers.showEditRestaurant)
 

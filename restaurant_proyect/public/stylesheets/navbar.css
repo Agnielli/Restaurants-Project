@@ -5,6 +5,32 @@
 a {
   text-decoration: none;
 }
+
+.scale{
+  transition: all 1s;
+}
+
+.scale:hover{
+  scale: 1.1;
+}
+
+a img{
+  width: 11.25rem;
+  height: 4.5rem;
+}
+
+button{
+  transition: all 0.7s !important;
+}
+
+button:hover{
+  scale: 0.95;
+}
+
+p{
+  text-wrap: pretty;
+}
+
 .menu{
   display: flex;
   justify-content: space-between;

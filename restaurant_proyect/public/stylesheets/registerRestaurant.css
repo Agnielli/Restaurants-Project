@@ -36,12 +36,24 @@ input, textarea, select {
   box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.6);
 }
 
-.navbar a, p, button{
+.navbar a, p, button, h3, h4, label{
   font-family: 'Josefin Slab', serif;
   font-weight: bolder;
 }
 
+button{
+  transition: all 1s;
+}
+
 button:hover{
+  scale: 0.95;
+}
+
+.btn{
+  transition: all 0.7s;
+}
+
+.btn:hover{
   scale: 0.95;
 }
 
@@ -49,6 +61,8 @@ p{
   font-size: 1.3rem;
   margin: 0;
   margin-top: 0.5rem;
+  text-wrap: pretty;
+ 
 }
 
 label{

@@ -1,4 +1,6 @@
-
+p{
+  text-wrap: pretty;
+}
 
 .section1{
   padding: 4rem 0;
@@ -6,10 +8,10 @@
 
 .postit{
   background-color: white;
- 
   width: 100%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 .experts {
   margin-bottom: 1rem;
   display: flex;
@@ -21,7 +23,7 @@
   padding-bottom: 1rem;
 }
 
-.experts img {
+.experts img{
   width: 100%;
   border-radius: 1rem 1rem 0 0;
   aspect-ratio: 1/1;
@@ -31,3 +33,30 @@ a, h1, h2, h3, h4{
   font-family: 'Josefin Slab', serif;
   font-weight: bold;
 }
+
+a, a:hover{
+  color: white;
+  text-decoration: none;
+}
+
+.link-color{
+  color: #9A4444 !important;
+  font-size: 1rem;
+  font-family: 'Roboto'; 
+  font-weight: normal; 
+  transition: all 0.7s;
+}
+
+.link-color:hover{
+  font-size: 1rem;
+  font-family: 'Roboto';
+  font-weight: bold;
+  scale: 1.1;
+  
+}
+
+.experts a img{
+  width: 100%;
+  height: auto;
+}
+

@@ -1,4 +1,6 @@
-
+p{
+  text-wrap: pretty;
+}
 
 .footer-basic {
   padding:40px 0;
@@ -15,8 +17,17 @@
   margin-bottom:0;
 }
 
-.footer-basic li {
+.footer-basic li, a{
   padding:0 10px;
+  transition: all 1s;
+}
+
+.footer-basic li:hover{
+  scale: 1.1;
+}
+
+.footer-basic a:hover{
+  scale: 1.3;
 }
 
 .footer-basic ul a {
@@ -59,4 +70,8 @@
   font-size:13px;
   color: black;
   margin-bottom:0;
+}
+
+.footergap{
+  gap: 2rem;
 }

@@ -4,18 +4,19 @@
 <%- include('navbar') %>
 
 <main>
+  
   <div class="fondo">
     <div class="container-xxl">
       <section class="row section1 justify-content-center min-height align-content-center">
-        <h1 class="pb-3 text-center">Todos los restaurantes</h1>
+        <h1 class="pb-3 text-center">TODOS LOS RESTAURANTES</h1>
         <% result.forEach(elem => { %>
           <div class="d-flex  justify-content-evenly col-12 col-md-6 col-xl-3">
             <div class="experts postit">
-              <img src="/images/restaurant/<%= elem.rest_img %>" alt="imagen del restaurante">
+              <a href="/restaurants/oneRestaurant/<%= elem.restaurant_id %>"><img src="/images/restaurant/<%= elem.rest_img %>" alt="imagen del restaurante"></a>
               <h3 class="pt-2"><%= elem.rest_name %></h3>
-              <p>Estilo de cocina: <%= elem.style %></p>
-              <p>Email: <a href="mailto:<%= elem.email %>"><%= elem.email %></a></p>
-              <a href="/restaurants/oneRestaurant/<%= elem.restaurant_id %>"><button class="btn btn-dark">VER MÁS</button></a>
+              <p class="mb-1">Estilo de cocina: <%= elem.style %></p>
+              <a class="link-color mb-3" href="mailto:<%= elem.email %>"><%= elem.email %></a>
+              <a href="/restaurants/oneRestaurant/<%= elem.restaurant_id %>"><button class="btn btn-dark pt-2">VER MÁS</button></a>
             </div>
           </div>
           <%})%>
@@ -23,6 +24,8 @@
     
     </div>
   </div>
+
+  
 </main>
 
 <%- include('footer') %>

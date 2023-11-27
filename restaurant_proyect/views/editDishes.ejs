@@ -7,13 +7,13 @@
   <section class="row section1 align-items-center text-center">
     <div class="col-12 col-xl-6 p-0">
       
-      <img src="/images/restaurant/<%= result[0].rest_img %>" alt="imagen del restaurante">
+      <img src="/images/dishes/<%= result[0].dishes_img  %>" alt="imagen del restaurante">
       
     </div>
     <div class="col-12 col-xl-6 p-0">
       <form 
         class="m-0"
-        action="/dishes/createDishes/<%= restaurant_id %>" 
+        action="/dishes/editDishes/<%= result[0].dishes_id %>/<%= result[0].restaurant_id %>" 
         method="post"
         enctype="multipart/form-data">
 
@@ -23,6 +23,7 @@
         type="text"
         name="dishes_name"
         placeholder="Titulo del plato"
+        value="<%= result[0].dishes_name %>"
         >
         
         <label for="name"><p>Descripción del plato</p></label>
@@ -31,8 +32,9 @@
         type="text"
         name="dishes_description"
         placeholder="Descripción del plato"
+        value="<%= result[0].dishes_description %>"
         >
-
+        
         <label class="btn btn-dark pt-2 mt-4" for="file">SUBE UNA IMAGEN</label>
           <input
             class="form-control"
@@ -41,10 +43,10 @@
             name="img"
             style="display: none;">
 
-        <h4 style="color:red"><%= typeof message != 'undefined' ? message : null %></h4>
+        <h3><%= typeof message != 'undefined' ? message : null %></h3>
         <div>
         <button class="btn btn-dark pt-2">ACEPTAR</button>
-        <a href="/restaurants/oneRestaurant/<%= restaurant_id %>"><button class="btn btn-dark pt-2" type="button">CANCELAR</button></a>
+        <a href="/restaurants/oneRestaurant/<%= result[0].restaurant_id %>"><button class="btn btn-dark pt-2" type="button">CANCELAR</button></a>
         <button class="btn btn-dark pt-2" type="reset">RESET</button>
       </div>
       

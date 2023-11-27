@@ -21,6 +21,11 @@ a, h1, h2, h3, h4{
   font-weight: bold;
 }
 
+a, a:hover{
+  color: white;
+  text-decoration: none;
+}
+
 h1{
   font-size: 4rem;
 }
